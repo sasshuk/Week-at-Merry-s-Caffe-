@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week at Merry's Place - Main Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CRT overlay scanlines -->
+    <div class="crt-overlay"></div>
+
+    <!-- Main Menu Container -->
+    <div class="menu-container">
+        <header class="title-section">
+            <h1 class="game-title" data-text="WEEK AT MERRY'S">WEEK AT MERRY'S</h1>
+            <h2 class="game-subtitle">PLACE</h2>
+            <p class="demo-tag">v1.0 - Early Build</p>
+        </header>
+
+        <!-- Menu Navigation Options -->
+        <nav class="menu-nav">
+            <button class="menu-btn" id="btn-newgame">NEW GAME</button>
+            <button class="menu-btn" id="btn-continue">CONTINUE (NIGHT 1)</button>
+            <button class="menu-btn" id="btn-nightselect">NIGHT SELECT</button>
+            <button class="menu-btn" id="btn-options">OPTIONS</button>
+            <button class="menu-btn danger" id="btn-quit">QUIT GAME</button>
+        </nav>
+
+        <!-- Night Select Sub-Panel (Hidden by default) -->
+        <div class="panel hidden" id="night-select-panel">
+            <h3>SELECT NIGHT</h3>
+            <div class="night-grid">
+                <button class="night-btn" onclick="startNight(1)">NIGHT 1</button>
+                <button class="night-btn" onclick="startNight(2)">NIGHT 2</button>
+                <button class="night-btn" onclick="startNight(3)">NIGHT 3</button>
+                <button class="night-btn" onclick="startNight(4)">NIGHT 4</button>
+                <button class="night-btn" onclick="startNight(5)">NIGHT 5</button>
+                <button class="night-btn" onclick="startNight(6)">NIGHT 6</button>
+            </div>
+            <button class="back-btn" id="btn-back">BACK</button>
+        </div>
+
+        <footer class="footer-info">
+            <p>© 2026 Indie Game Dev | Built for GitHub Pages</p>
+        </footer>
+    </div>
+
+    <!-- Background Canvas for Static/Noise Effect -->
+    <canvas id="noise-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
